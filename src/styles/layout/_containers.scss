@@ -20,6 +20,14 @@
         }
     }
 
+    &.grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 360px);
+        grid-template-rows: max-content;
+        grid-gap: 1rem;
+        justify-content: center;
+    }
+
 }
 
 .col {

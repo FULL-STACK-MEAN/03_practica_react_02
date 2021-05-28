@@ -1,14 +1,15 @@
 .card {
-    padding: 1rem;
     margin: 1rem;
-    box-shadow: 2px 2px 4px grey;
+    box-shadow: $shadow;
+    border-radius: 0.5rem;
 
-    h1 {
+    .header-card {
+        padding: 1rem;
         border-bottom: 1px solid lightgray;
-        padding-bottom: 0.5rem;
+
+        h1 {
+            font-size: 1.1rem;
+        }
     }
 
-    p:nth-of-type(1) {
-        margin-top: 1rem;
-    }
 }

@@ -1,6 +1,7 @@
 // Ejemplo de componente raiz de clase
 
 import React, { Component } from 'react';
+import Tasks from './components/Tasks';
 
 class App extends Component {
 
@@ -28,13 +29,15 @@ class App extends Component {
     }
   ]
 
+  title = 'Listado de tareas'
+
   render() {
     return (
-      <>
-        { this.tasks.map((elem, i) => {
-          return <p key={i}>{elem.title} - {elem.members} - {elem.date}</p>
-        })}
-      </>
+      <div className="container show">
+        <div className="row grid">
+          <Tasks tasks={this.tasks} title={this.title} />
+        </div>
+      </div>
     )
   }
 }
