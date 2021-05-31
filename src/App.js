@@ -1,6 +1,7 @@
 // Ejemplo de componente raiz de clase
 
 import React, { Component } from 'react';
+import Aside from './components/Aside';
 import Tasks from './components/Tasks';
 
 class App extends Component {
@@ -37,6 +38,7 @@ class App extends Component {
         <div className="row grid">
           <Tasks tasks={this.tasks} title={this.title} />
         </div>
+        <Aside />
       </div>
     )
   }
