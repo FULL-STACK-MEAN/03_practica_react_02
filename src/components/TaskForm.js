@@ -19,13 +19,23 @@ class TaskForm extends Component {
         console.log(this.state)
     }
 
-    addTask = () => {
+    addTask = (event) => {
+        event.preventDefault();
+        if(this.state.title === '' || this.state.members === '' || this.state.description === '') {
+            return;
+        }
         this.props.addTask(this.state);
+        this.setState({
+            title: '',
+            members: '',
+            description: '',
+            date: (new Date()).toISOString().substring(0, 10)
+        })
     }
 
     render() {
         return (
-            <form>
+            <form onSubmit={this.addTask}>
                 <div className="row">
                     <div className="col-100">
                         <label>Nombre tareas</label>
@@ -62,7 +72,7 @@ class TaskForm extends Component {
                     </div>
                 </div>
                 <div className="row flex j-center a-center">
-                    <button type="button" onClick={this.addTask}>Añadir</button>
+                    <button type="submit">Añadir</button>
                 </div>
             </form>
         )

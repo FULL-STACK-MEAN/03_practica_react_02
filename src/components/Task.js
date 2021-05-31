@@ -6,13 +6,13 @@ import calendarIcon from '../img/icons/calendar.svg';
 class Task extends Component {
     render() {
 
-        const {task} = this.props;
+        const {task, deleteTask, toggleDoneTask} = this.props;
 
         return (
             <div className="card">
                 <div className="header-card">
                     <h1>{task.title}</h1>
-                    <img src={trashIcon} alt="" />
+                    <img src={trashIcon} alt="" onClick={deleteTask.bind(this, task.id)} />
                 </div>
                 <div className="body-card">
                     <div>
@@ -28,7 +28,9 @@ class Task extends Component {
                     </p>
                 </div>
                 <div className="footer-card">
-                    <button>Pendiente</button>
+                    <button onClick={toggleDoneTask.bind(this, task.id)}>
+                        {task.done ? 'Terminada' : 'Pendiente'}
+                    </button>
                 </div>
             </div>
         )

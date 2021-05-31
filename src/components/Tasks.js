@@ -6,7 +6,10 @@ class Tasks extends Component {
     render() {
         return (
             <>
-                { this.props.tasks.map((elem, i) => <Task key={i} task={elem} />)}
+                { this.props.tasks.map((elem, i) => <Task key={i} 
+                                                          task={elem} 
+                                                          deleteTask={this.props.deleteTask}
+                                                          toggleDoneTask={this.props.toggleDoneTask} />)}
             </>
         )
     }
