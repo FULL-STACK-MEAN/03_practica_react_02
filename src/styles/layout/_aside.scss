@@ -4,7 +4,9 @@ aside {
     left: -300px;
     width: 360px;
     height: 100vh;
+    padding: 60px 1rem 1rem;
     background-color: #52143e;
+    overflow-y: auto;
     transition: all 900ms ease-in;
 
     #burger {
@@ -24,6 +26,11 @@ aside {
 
     }
 
+    form {
+        opacity: 0;
+        transition: opacity 400ms 300ms ease-in;
+    }
+
     &.open {
         left: 0;
 
@@ -37,6 +44,10 @@ aside {
             .bar.bottom {
                 transform: translateY(-8px) rotateZ(-45deg);
             }
+        }
+
+        form {
+            opacity: 1;
         }
     }
 }

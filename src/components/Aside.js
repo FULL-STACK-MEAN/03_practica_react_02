@@ -1,4 +1,5 @@
 import React, { Component, createRef } from 'react';
+import TaskForm from './TaskForm';
 
 class Aside extends Component {
 
@@ -26,6 +27,7 @@ class Aside extends Component {
                    <div className="bar center"></div>
                    <div className="bar bottom"></div>
                </div>
+               <TaskForm />
            </aside>
         )
     }
