@@ -6,6 +6,7 @@
     .header-card {
         padding: 1rem;
         border-bottom: 1px solid lightgray;
+        @include flex(row, space-between, center);
 
         h1 {
             font-size: 1.1rem;
@@ -15,6 +16,18 @@
     .body-card {
         height: 260px;
         padding: 1rem;
+        @include flex(column, space-between, flex-start);
+        font-size: 0.8rem;
+
+        .users {
+            margin-bottom: 0.5rem;
+            @include flex(row, flex-start, center);
+        }
+
+        .date {
+            @include flex(row, flex-start, center);
+        }
+
     }
 
     .footer-card {
