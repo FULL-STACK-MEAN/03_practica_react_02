@@ -27,7 +27,7 @@ class Aside extends Component {
                    <div className="bar center"></div>
                    <div className="bar bottom"></div>
                </div>
-               <TaskForm />
+               <TaskForm addTask={this.props.addTask} />
            </aside>
         )
     }
